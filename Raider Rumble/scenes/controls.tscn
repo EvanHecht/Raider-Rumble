@@ -72,7 +72,7 @@ align = 1
 valign = 1
 
 [node name="P1ControlsBody" type="Label" parent="Panel/P1Controls"]
-anchor_top = 0.15
+anchor_top = 0.175
 anchor_right = 1.0
 anchor_bottom = 0.8
 margin_right = -0.399994
@@ -80,12 +80,12 @@ custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.458824, 0, 0, 1 )
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = SubResource( 3 )
-text = "JUMP - F or Gamepad A
+text = "MOVE - WASD or Left Stick
+JUMP - F or Gamepad A
 ATTACK - G or Gamepad X
 SPECIAL - H or Gamepad B
 BLOCK - J or Gamepad Y"
 align = 1
-valign = 1
 
 [node name="P2Controls" type="Control" parent="Panel"]
 anchor_left = 0.525
@@ -106,7 +106,7 @@ align = 1
 valign = 1
 
 [node name="P2ControlsBody" type="Label" parent="Panel/P2Controls"]
-anchor_top = 0.15
+anchor_top = 0.175
 anchor_right = 1.0
 anchor_bottom = 0.8
 margin_right = -0.399994
@@ -114,12 +114,12 @@ custom_colors/font_color = Color( 0, 0.647059, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = SubResource( 3 )
-text = "JUMP - P or Gamepad A
+text = "MOVE - Arrows or Left Stick
+JUMP - P or Gamepad A
 ATTACK - O or Gamepad X
 SPECIAL - I or Gamepad B
 BLOCK - U or Gamepad Y"
 align = 1
-valign = 1
 
 [node name="FullscreenLabel" type="Label" parent="Panel"]
 anchor_left = 0.1

@@ -5,7 +5,7 @@ onready var SFXController = $SFXController
 
 var menu_music = preload("res://sound/Everythings_Fine_Raider_Rumble.wav")
 var battle_music = preload("res://sound/Something_Else_Raider_Rumble.wav")
-var volume = 1.0
+var volume = .65
 var min_volume = -80.0
 var max_volume = 0.0
 var db = max_volume
@@ -21,6 +21,9 @@ var effects = {
 	
 }
 
+func _ready():
+	change_volume(0)
+	
 func _physics_process(delta):
 	VolumeLabel.modulate.a -= .01
 	VolumeLabel.modulate.a = max(VolumeLabel.modulate.a, 0)
@@ -28,11 +31,13 @@ func _physics_process(delta):
 func play_menu_music():
 	if stream != menu_music:
 		stream = menu_music
+		change_volume(0)
 		play()
 
 func play_battle_music():
 	if stream != battle_music:
 		stream = battle_music
+		change_volume(0)
 		play()
 
 func change_volume(amount: float):
