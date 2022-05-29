@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/damage_counter_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/match_timer_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://fonts/countdown_timer_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://sprites/stages/sf_p1_damage_counter.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://sprites/stages/sf_p2_damage_counter.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://scripts/match_ui.gd" type="Script" id=6]
+
+[node name="MatchUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="Timer" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -117.5
+margin_right = 117.5
+margin_bottom = 95.0
+custom_fonts/font = ExtResource( 2 )
+text = "8:00.00"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountdownTimer" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -115.0
+margin_top = -94.5
+margin_right = 115.0
+margin_bottom = 94.5
+custom_fonts/font = ExtResource( 3 )
+text = "3"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P1DamageCounter" type="AnimatedSprite" parent="."]
+position = Vector2( 100, 635 )
+scale = Vector2( 0.6, 0.6 )
+frames = ExtResource( 4 )
+
+[node name="P1DamageLabel" type="Label" parent="P1DamageCounter"]
+margin_left = -118.0
+margin_top = -52.0
+margin_right = 135.0
+margin_bottom = 90.0
+custom_fonts/font = ExtResource( 1 )
+text = "0%"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P2DamageCounter" type="AnimatedSprite" parent="."]
+position = Vector2( 1180, 635 )
+scale = Vector2( 0.6, 0.6 )
+frames = ExtResource( 5 )
+
+[node name="P2DamageLabel" type="Label" parent="P2DamageCounter"]
+margin_left = -118.0
+margin_top = -52.0
+margin_right = 135.0
+margin_bottom = 90.0
+custom_fonts/font = ExtResource( 1 )
+text = "0%"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TransitionColor" type="ColorRect" parent="."]
+margin_left = -64.0
+margin_top = -36.0
+margin_right = 1344.0
+margin_bottom = 758.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MatchEndLabel" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -294.0
+margin_top = -94.5
+margin_right = 294.0
+margin_bottom = 94.5
+custom_fonts/font = ExtResource( 3 )
+text = "GAME"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

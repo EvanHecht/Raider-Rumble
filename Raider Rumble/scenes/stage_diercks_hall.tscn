@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/stage_script.gd" type="Script" id=1]
+[ext_resource path="res://scenes/match_ui.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/stages/diercks_stage_background.png" type="Texture" id=3]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/pause_screen.tscn" type="PackedScene" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 181.885, 48.6786 )
+
+[node name="DiercksHall" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 640, 360 )
+texture = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 419, 464 )
+
+[node name="Player2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 907, 465 )
+player_num = 1
+
+[node name="Platform1" type="Sprite" parent="."]
+position = Vector2( 654, 557 )
+scale = Vector2( 1.60541, 1.93103 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1/StaticBody2D"]
+position = Vector2( -0.622894, 34.1786 )
+shape = SubResource( 1 )
+
+[node name="StageCamera" type="Camera2D" parent="."]
+position = Vector2( 640, 360 )
+current = true
+limit_left = -64
+limit_top = -36
+limit_right = 1346
+limit_bottom = 756
+smoothing_enabled = true
+smoothing_speed = 1.0
+editor_draw_limits = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="StageCamera"]
+
+[node name="MatchUI" parent="StageCamera/CanvasLayer" instance=ExtResource( 2 )]
+
+[node name="PauseScreen" parent="." instance=ExtResource( 13 )]
+visible = false

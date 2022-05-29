@@ -1,0 +1,177 @@
+[gd_scene load_steps=67 format=2]
+
+[ext_resource path="res://scripts/moveset_functions.gd" type="Script" id=1]
+[ext_resource path="res://animations/ee_animations/ee_neutral_attack_animation.tres" type="Animation" id=2]
+[ext_resource path="res://scripts/player.gd" type="Script" id=3]
+[ext_resource path="res://animations/player_animation_state_machine.tres" type="AnimationNodeStateMachine" id=4]
+[ext_resource path="res://animations/me_animations/me_airborne_animation.tres" type="Animation" id=5]
+[ext_resource path="res://animations/me_animations/me_crouching_animation.tres" type="Animation" id=6]
+[ext_resource path="res://animations/me_animations/me_down_attack_animation.tres" type="Animation" id=7]
+[ext_resource path="res://animations/me_animations/me_blocking_animation.tres" type="Animation" id=8]
+[ext_resource path="res://animations/me_animations/me_down_special_animation.tres" type="Animation" id=9]
+[ext_resource path="res://animations/me_animations/me_forward_special_animation.tres" type="Animation" id=10]
+[ext_resource path="res://animations/me_animations/me_forward_attack_animation.tres" type="Animation" id=11]
+[ext_resource path="res://animations/me_animations/me_neutral_attack_animation.tres" type="Animation" id=12]
+[ext_resource path="res://animations/me_animations/me_neutral_special_animation.tres" type="Animation" id=13]
+[ext_resource path="res://animations/me_animations/me_idle_animation.tres" type="Animation" id=14]
+[ext_resource path="res://animations/me_animations/me_stunned_animation.tres" type="Animation" id=15]
+[ext_resource path="res://animations/me_animations/me_running_animation.tres" type="Animation" id=16]
+[ext_resource path="res://animations/nu_animations/nu_crouching_animation.tres" type="Animation" id=17]
+[ext_resource path="res://animations/nu_animations/nu_forward_special_animation.tres" type="Animation" id=18]
+[ext_resource path="res://animations/nu_animations/nu_blocking_animation.tres" type="Animation" id=19]
+[ext_resource path="res://animations/nu_animations/nu_down_attack_animation.tres" type="Animation" id=20]
+[ext_resource path="res://animations/nu_animations/nu_down_special_animation.tres" type="Animation" id=21]
+[ext_resource path="res://animations/nu_animations/nu_forward_attack_animation.tres" type="Animation" id=22]
+[ext_resource path="res://animations/nu_animations/nu_idle_animation.tres" type="Animation" id=23]
+[ext_resource path="res://animations/nu_animations/nu_neutral_attack_animation.tres" type="Animation" id=24]
+[ext_resource path="res://animations/nu_animations/nu_neutral_special_animation.tres" type="Animation" id=25]
+[ext_resource path="res://animations/nu_animations/nu_running_animation.tres" type="Animation" id=26]
+[ext_resource path="res://animations/nu_animations/nu_stunned_animation.tres" type="Animation" id=27]
+[ext_resource path="res://animations/nu_animations/nu_up_attack_animation.tres" type="Animation" id=28]
+[ext_resource path="res://animations/me_animations/me_up_special_animation.tres" type="Animation" id=29]
+[ext_resource path="res://animations/me_animations/me_up_attack_animation.tres" type="Animation" id=30]
+[ext_resource path="res://animations/nu_animations/nu_up_special_animation.tres" type="Animation" id=31]
+[ext_resource path="res://animations/nu_animations/nu_airborne_animation.tres" type="Animation" id=32]
+[ext_resource path="res://animations/se_animations/se_neutral_attack_animation.tres" type="Animation" id=33]
+[ext_resource path="res://animations/se_animations/se_forward_attack_animation.tres" type="Animation" id=34]
+[ext_resource path="res://animations/se_animations/se_down_attack_animation.tres" type="Animation" id=35]
+[ext_resource path="res://animations/se_animations/se_neutral_special_animation.tres" type="Animation" id=36]
+[ext_resource path="res://animations/se_animations/se_up_attack_animation.tres" type="Animation" id=37]
+[ext_resource path="res://animations/se_animations/se_forward_special_animation.tres" type="Animation" id=38]
+[ext_resource path="res://animations/se_animations/se_up_special_animation.tres" type="Animation" id=39]
+[ext_resource path="res://animations/bu_animations/bu_neutral_attack_animation.tres" type="Animation" id=40]
+[ext_resource path="res://animations/ee_animations/ee_forward_attack_animation.tres" type="Animation" id=41]
+[ext_resource path="res://animations/ee_animations/ee_down_attack_animation.tres" type="Animation" id=42]
+[ext_resource path="res://animations/ee_animations/ee_up_attack_animation.tres" type="Animation" id=43]
+[ext_resource path="res://animations/ee_animations/ee_down_special_animation.tres" type="Animation" id=44]
+[ext_resource path="res://animations/ee_animations/ee_neutral_special_animation.tres" type="Animation" id=45]
+[ext_resource path="res://animations/ee_animations/ee_forward_special_animation.tres" type="Animation" id=46]
+[ext_resource path="res://animations/ee_animations/ee_up_special_animation.tres" type="Animation" id=47]
+[ext_resource path="res://animations/ee_animations/ee_crouching_animation.tres" type="Animation" id=48]
+[ext_resource path="res://sprites/characters/electrical engineer/sf_electrical_engineer.tres" type="SpriteFrames" id=49]
+[ext_resource path="res://animations/bu_animations/bu_down_attack_animation.tres" type="Animation" id=50]
+[ext_resource path="res://animations/bu_animations/bu_forward_attack_animation.tres" type="Animation" id=51]
+[ext_resource path="res://animations/bu_animations/bu_down_special_animation.tres" type="Animation" id=52]
+[ext_resource path="res://animations/bu_animations/bu_up_attack_animation.tres" type="Animation" id=53]
+[ext_resource path="res://animations/bu_animations/bu_neutral_special_animation.tres" type="Animation" id=54]
+[ext_resource path="res://animations/bu_animations/bu_forward_special_animation.tres" type="Animation" id=55]
+[ext_resource path="res://animations/bu_animations/bu_up_special_animation.tres" type="Animation" id=56]
+[ext_resource path="res://animations/ae_animations/ae_neutral_attack_animation.tres" type="Animation" id=57]
+[ext_resource path="res://animations/ae_animations/ae_forward_attack_animation.tres" type="Animation" id=58]
+[ext_resource path="res://animations/ae_animations/ae_up_attack_animation.tres" type="Animation" id=59]
+[ext_resource path="res://animations/ae_animations/ae_down_attack_animation.tres" type="Animation" id=60]
+[ext_resource path="res://animations/ae_animations/ae_neutral_special_animation.tres" type="Animation" id=61]
+[ext_resource path="res://animations/ae_animations/ae_forward_special_animation.tres" type="Animation" id=62]
+[ext_resource path="res://animations/ae_animations/ae_down_special_animation.tres" type="Animation" id=63]
+[ext_resource path="res://animations/ae_animations/ae_up_special_animation.tres" type="Animation" id=64]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.5, 49 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=2]
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+script = ExtResource( 3 )
+
+[node name="EnvironmentCollider" type="CollisionShape2D" parent="."]
+position = Vector2( 0.5, 15 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 49 )
+animation = "down_special"
+
+[node name="AnimationTree" type="AnimationTree" parent="AnimatedSprite"]
+tree_root = ExtResource( 4 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 2 )
+parameters/conditions/is_airborne = false
+parameters/conditions/is_crouching = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite"]
+anims/ae_down_attack_animation = ExtResource( 60 )
+anims/ae_down_special_animation = ExtResource( 63 )
+anims/ae_forward_attack_animation = ExtResource( 58 )
+anims/ae_forward_special_animation = ExtResource( 62 )
+anims/ae_neutral_attack_animation = ExtResource( 57 )
+anims/ae_neutral_special_animation = ExtResource( 61 )
+anims/ae_up_attack_animation = ExtResource( 59 )
+anims/ae_up_special_animation = ExtResource( 64 )
+anims/bu_airborne_animation = ExtResource( 32 )
+anims/bu_blocking_animation = ExtResource( 19 )
+anims/bu_crouching_animation = ExtResource( 17 )
+anims/bu_down_attack_animation = ExtResource( 50 )
+anims/bu_down_special_animation = ExtResource( 52 )
+anims/bu_forward_attack_animation = ExtResource( 51 )
+anims/bu_forward_special_animation = ExtResource( 55 )
+anims/bu_idle_animation = ExtResource( 23 )
+anims/bu_neutral_attack_animation = ExtResource( 40 )
+anims/bu_neutral_special_animation = ExtResource( 54 )
+anims/bu_running_animation = ExtResource( 26 )
+anims/bu_stunned_animation = ExtResource( 27 )
+anims/bu_up_attack_animation = ExtResource( 53 )
+anims/bu_up_special_animation = ExtResource( 56 )
+anims/ee_airborne_animation = ExtResource( 32 )
+anims/ee_blocking_animation = ExtResource( 19 )
+anims/ee_crouching_animation = ExtResource( 48 )
+anims/ee_down_attack_animation = ExtResource( 42 )
+anims/ee_down_special_animation = ExtResource( 44 )
+anims/ee_forward_attack_animation = ExtResource( 41 )
+anims/ee_forward_special_animation = ExtResource( 46 )
+anims/ee_idle_animation = ExtResource( 23 )
+anims/ee_neutral_attack_animation = ExtResource( 2 )
+anims/ee_neutral_special_animation = ExtResource( 45 )
+anims/ee_running_animation = ExtResource( 26 )
+anims/ee_stunned_animation = ExtResource( 27 )
+anims/ee_up_attack_animation = ExtResource( 43 )
+anims/ee_up_special_animation = ExtResource( 47 )
+anims/me_airborne_animation = ExtResource( 5 )
+anims/me_blocking_animation = ExtResource( 8 )
+anims/me_crouching_animation = ExtResource( 6 )
+anims/me_down_attack_animation = ExtResource( 7 )
+anims/me_down_special_animation = ExtResource( 9 )
+anims/me_forward_attack_animation = ExtResource( 11 )
+anims/me_forward_special_animation = ExtResource( 10 )
+anims/me_idle_animation = ExtResource( 14 )
+anims/me_neutral_attack_animation = ExtResource( 12 )
+anims/me_neutral_special_animation = ExtResource( 13 )
+anims/me_running_animation = ExtResource( 16 )
+anims/me_stunned_animation = ExtResource( 15 )
+anims/me_up_attack_animation = ExtResource( 30 )
+anims/me_up_special_animation = ExtResource( 29 )
+anims/nu_airborne_animation = ExtResource( 32 )
+anims/nu_blocking_animation = ExtResource( 19 )
+anims/nu_crouching_animation = ExtResource( 17 )
+anims/nu_down_attack_animation = ExtResource( 20 )
+anims/nu_down_special_animation = ExtResource( 21 )
+anims/nu_forward_attack_animation = ExtResource( 22 )
+anims/nu_forward_special_animation = ExtResource( 18 )
+anims/nu_idle_animation = ExtResource( 23 )
+anims/nu_neutral_attack_animation = ExtResource( 24 )
+anims/nu_neutral_special_animation = ExtResource( 25 )
+anims/nu_running_animation = ExtResource( 26 )
+anims/nu_stunned_animation = ExtResource( 27 )
+anims/nu_up_attack_animation = ExtResource( 28 )
+anims/nu_up_special_animation = ExtResource( 31 )
+anims/se_airborne_animation = ExtResource( 32 )
+anims/se_blocking_animation = ExtResource( 19 )
+anims/se_crouching_animation = ExtResource( 17 )
+anims/se_down_attack_animation = ExtResource( 35 )
+anims/se_down_special_animation = ExtResource( 21 )
+anims/se_forward_attack_animation = ExtResource( 34 )
+anims/se_forward_special_animation = ExtResource( 38 )
+anims/se_idle_animation = ExtResource( 23 )
+anims/se_neutral_attack_animation = ExtResource( 33 )
+anims/se_neutral_special_animation = ExtResource( 36 )
+anims/se_running_animation = ExtResource( 26 )
+anims/se_stunned_animation = ExtResource( 27 )
+anims/se_up_attack_animation = ExtResource( 37 )
+anims/se_up_special_animation = ExtResource( 39 )
+
+[node name="MovesetFunctions" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="Hitboxes" type="Node2D" parent="."]

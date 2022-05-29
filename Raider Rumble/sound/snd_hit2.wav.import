@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/snd_hit2.wav-a25662bd5c83dff32812b4b8436b7006.sample"
+
+[deps]
+
+source_file="res://sound/snd_hit2.wav"
+dest_files=[ "res://.import/snd_hit2.wav-a25662bd5c83dff32812b4b8436b7006.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

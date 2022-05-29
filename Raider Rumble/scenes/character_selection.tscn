@@ -1,0 +1,215 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://fonts/choose_your_raider.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scripts/character_selection.gd" type="Script" id=2]
+[ext_resource path="res://sprites/CharacterSelection/me_icon.png" type="Texture" id=3]
+[ext_resource path="res://sprites/CharacterSelection/SE_Icon.png" type="Texture" id=4]
+[ext_resource path="res://sprites/CharacterSelection/AE_Icon.png" type="Texture" id=5]
+[ext_resource path="res://sprites/CharacterSelection/p1_character_selector.png" type="Texture" id=6]
+[ext_resource path="res://sprites/CharacterSelection/p2_character_selector.png" type="Texture" id=7]
+[ext_resource path="res://sprites/characters/mechanical engineer/sf_mechanical_engineer.tres" type="SpriteFrames" id=8]
+[ext_resource path="res://sprites/CharacterSelection/p1_pedestal.png" type="Texture" id=9]
+[ext_resource path="res://sprites/CharacterSelection/p2_pedestal.png" type="Texture" id=10]
+[ext_resource path="res://fonts/character_name.tres" type="DynamicFont" id=11]
+[ext_resource path="res://sprites/characters/software engineer/sf_software_engineer.tres" type="SpriteFrames" id=12]
+[ext_resource path="res://sprites/CharacterSelection/sf_checkmark.tres" type="SpriteFrames" id=13]
+[ext_resource path="res://sprites/CharacterSelection/equations.png" type="Texture" id=14]
+[ext_resource path="res://sprites/CharacterSelection/border.png" type="Texture" id=15]
+[ext_resource path="res://sprites/CharacterSelection/EE_Icon.png" type="Texture" id=18]
+[ext_resource path="res://sprites/CharacterSelection/NU_Icon.png" type="Texture" id=19]
+[ext_resource path="res://sprites/CharacterSelection/BA_Icon.png" type="Texture" id=20]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 0, 0, 1 )
+
+[node name="CharacterSelection" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0.0392157, 0.027451, 0.027451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Equations" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.184314 )
+margin_left = -1280.0
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 14 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Border" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.254902 )
+position = Vector2( 640, 360 )
+scale = Vector2( 0.99, 0.99 )
+texture = ExtResource( 15 )
+
+[node name="TitleText" type="Label" parent="."]
+margin_left = 253.0
+margin_top = -109.0
+margin_right = 1031.0
+margin_bottom = 258.0
+custom_fonts/font = ExtResource( 1 )
+text = "Choose Your Raider"
+align = 1
+valign = 1
+
+[node name="MEIcon" type="Sprite" parent="."]
+position = Vector2( 545, 234 )
+texture = ExtResource( 3 )
+
+[node name="SEIcon" type="Sprite" parent="."]
+position = Vector2( 736, 234 )
+texture = ExtResource( 4 )
+
+[node name="EEIcon" type="Sprite" parent="."]
+position = Vector2( 545, 394 )
+texture = ExtResource( 18 )
+
+[node name="NUIcon" type="Sprite" parent="."]
+position = Vector2( 736, 394 )
+texture = ExtResource( 19 )
+
+[node name="BUIcon" type="Sprite" parent="."]
+position = Vector2( 545, 554 )
+texture = ExtResource( 20 )
+
+[node name="AEIcon" type="Sprite" parent="."]
+position = Vector2( 736, 554 )
+texture = ExtResource( 5 )
+
+[node name="P1Selector" type="Sprite" parent="."]
+position = Vector2( 545, 234 )
+texture = ExtResource( 6 )
+
+[node name="P2Selector" type="Sprite" parent="."]
+position = Vector2( 736, 234 )
+texture = ExtResource( 7 )
+
+[node name="P1Pedestal" type="Sprite" parent="."]
+position = Vector2( 240, 574 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="P1CharacterDisplay" type="AnimatedSprite" parent="P1Pedestal"]
+position = Vector2( 1, -107.5 )
+scale = Vector2( 6, 6 )
+frames = ExtResource( 8 )
+animation = "idle"
+frame = 3
+playing = true
+
+[node name="P1CharacterName" type="Label" parent="P1Pedestal"]
+margin_left = -100.0
+margin_top = -200.0
+margin_right = 306.0
+margin_bottom = -140.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 11 )
+text = "Mechanical Engineer"
+align = 1
+valign = 1
+
+[node name="P1ReadyLabel" type="Label" parent="P1Pedestal"]
+visible = false
+margin_left = -93.0
+margin_top = 23.0
+margin_right = 837.0
+margin_bottom = 216.0
+rect_scale = Vector2( 0.2, 0.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Press ATTACK To Confirm"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P1ReadyIcon" type="AnimatedSprite" parent="P1Pedestal"]
+visible = false
+position = Vector2( 0, -100 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 13 )
+playing = true
+
+[node name="P2Pedestal" type="Sprite" parent="."]
+position = Vector2( 1041, 574 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="P2CharacterDisplay" type="AnimatedSprite" parent="P2Pedestal"]
+position = Vector2( 1, -107.5 )
+scale = Vector2( 6, 6 )
+frames = ExtResource( 12 )
+animation = "idle"
+frame = 2
+playing = true
+
+[node name="P2CharacterName" type="Label" parent="P2Pedestal"]
+margin_left = -100.0
+margin_top = -200.0
+margin_right = 306.0
+margin_bottom = -140.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 11 )
+text = "Mechanical Engineer"
+align = 1
+valign = 1
+
+[node name="P2ReadyLabel" type="Label" parent="P2Pedestal"]
+visible = false
+margin_left = -93.0
+margin_top = 23.0
+margin_right = 837.0
+margin_bottom = 216.0
+rect_scale = Vector2( 0.2, 0.2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Press ATTACK To Confirm"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P2ReadyIcon" type="AnimatedSprite" parent="P2Pedestal"]
+visible = false
+position = Vector2( 0, -100 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 13 )
+frame = 6
+playing = true
+
+[node name="BackBar" type="ProgressBar" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 250.0
+margin_bottom = 90.0
+custom_styles/fg = SubResource( 1 )
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="BackBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -37.0
+margin_top = -14.0
+margin_right = 42.0
+margin_bottom = 17.0
+text = "Hold Special
+To Go Back"
+align = 1
+
+[node name="TransitionColor" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )

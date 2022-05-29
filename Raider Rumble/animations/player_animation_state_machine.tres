@@ -1,0 +1,265 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=87 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=1]
+animation = "airborne"
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "blocking"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "crouching"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "down_attack"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "down_special"
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "forward_attack"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "forward_special"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "neutral_attack"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "neutral_special"
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "running"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "stunned"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "up_attack"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "up_special"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+switch_mode = 2
+advance_condition = "is_airborne"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+switch_mode = 2
+auto_advance = true
+priority = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+switch_mode = 2
+auto_advance = true
+priority = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+switch_mode = 2
+advance_condition = "is_airborne"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+switch_mode = 2
+advance_condition = "is_crouching"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+switch_mode = 2
+advance_condition = "is_airborne"
+priority = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+switch_mode = 2
+auto_advance = true
+priority = 3
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=41]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+switch_mode = 2
+advance_condition = "is_airborne"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+switch_mode = 2
+priority = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=44]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=45]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=46]
+switch_mode = 2
+advance_condition = "is_airborne"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=47]
+switch_mode = 2
+auto_advance = true
+priority = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=48]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=49]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=50]
+switch_mode = 2
+advance_condition = "is_airborne"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=51]
+switch_mode = 2
+auto_advance = true
+priority = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=52]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=53]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=54]
+switch_mode = 2
+advance_condition = "is_crouching"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=55]
+switch_mode = 2
+advance_condition = "is_airborne"
+priority = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=56]
+switch_mode = 2
+auto_advance = true
+priority = 3
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=57]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=58]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=59]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=60]
+switch_mode = 2
+advance_condition = "is_airborne"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=61]
+switch_mode = 2
+auto_advance = true
+priority = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=62]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=63]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=64]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=65]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=66]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=67]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=68]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=69]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=70]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=71]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=72]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=73]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=74]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=75]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=76]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=77]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=78]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=79]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=80]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=81]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=82]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=83]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=84]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=85]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=86]
+
+[resource]
+states/airborne/node = SubResource( 1 )
+states/airborne/position = Vector2( 263, 142 )
+states/blocking/node = SubResource( 2 )
+states/blocking/position = Vector2( 193.039, 402.283 )
+states/crouching/node = SubResource( 3 )
+states/crouching/position = Vector2( 503, 142 )
+states/down_attack/node = SubResource( 4 )
+states/down_attack/position = Vector2( 378, 19.2827 )
+states/down_special/node = SubResource( 5 )
+states/down_special/position = Vector2( 776, 300.283 )
+states/forward_attack/node = SubResource( 6 )
+states/forward_attack/position = Vector2( -167, 220 )
+states/forward_special/node = SubResource( 7 )
+states/forward_special/position = Vector2( 776, 220 )
+states/idle/node = SubResource( 8 )
+states/idle/position = Vector2( 248, 271 )
+states/neutral_attack/node = SubResource( 9 )
+states/neutral_attack/position = Vector2( -167, 148 )
+states/neutral_special/node = SubResource( 10 )
+states/neutral_special/position = Vector2( 776, 148 )
+states/running/node = SubResource( 11 )
+states/running/position = Vector2( 503, 277 )
+states/stunned/node = SubResource( 12 )
+states/stunned/position = Vector2( 405.649, 605.243 )
+states/up_attack/node = SubResource( 13 )
+states/up_attack/position = Vector2( -167, 289.283 )
+states/up_special/node = SubResource( 14 )
+states/up_special/position = Vector2( 776, 383.283 )
+transitions = [ "idle", "running", SubResource( 15 ), "idle", "crouching", SubResource( 16 ), "crouching", "idle", SubResource( 17 ), "running", "idle", SubResource( 18 ), "running", "crouching", SubResource( 19 ), "crouching", "running", SubResource( 20 ), "idle", "airborne", SubResource( 21 ), "airborne", "idle", SubResource( 22 ), "airborne", "running", SubResource( 23 ), "running", "airborne", SubResource( 24 ), "idle", "neutral_attack", SubResource( 25 ), "airborne", "neutral_attack", SubResource( 26 ), "neutral_attack", "airborne", SubResource( 27 ), "neutral_attack", "idle", SubResource( 28 ), "neutral_attack", "running", SubResource( 29 ), "idle", "forward_attack", SubResource( 30 ), "airborne", "forward_attack", SubResource( 31 ), "forward_attack", "idle", SubResource( 32 ), "forward_attack", "airborne", SubResource( 33 ), "idle", "down_attack", SubResource( 34 ), "crouching", "down_attack", SubResource( 35 ), "airborne", "down_attack", SubResource( 36 ), "down_attack", "crouching", SubResource( 37 ), "down_attack", "airborne", SubResource( 38 ), "down_attack", "idle", SubResource( 39 ), "idle", "up_attack", SubResource( 40 ), "airborne", "up_attack", SubResource( 41 ), "up_attack", "airborne", SubResource( 42 ), "up_attack", "idle", SubResource( 43 ), "airborne", "forward_special", SubResource( 44 ), "running", "forward_special", SubResource( 45 ), "forward_special", "airborne", SubResource( 46 ), "forward_special", "idle", SubResource( 47 ), "airborne", "neutral_special", SubResource( 48 ), "idle", "neutral_special", SubResource( 49 ), "neutral_special", "airborne", SubResource( 50 ), "neutral_special", "idle", SubResource( 51 ), "crouching", "down_special", SubResource( 52 ), "airborne", "down_special", SubResource( 53 ), "down_special", "crouching", SubResource( 54 ), "down_special", "airborne", SubResource( 55 ), "down_special", "idle", SubResource( 56 ), "idle", "up_special", SubResource( 57 ), "airborne", "up_special", SubResource( 58 ), "running", "up_special", SubResource( 59 ), "up_special", "airborne", SubResource( 60 ), "up_special", "idle", SubResource( 61 ), "idle", "blocking", SubResource( 62 ), "blocking", "idle", SubResource( 63 ), "blocking", "running", SubResource( 64 ), "running", "blocking", SubResource( 65 ), "blocking", "airborne", SubResource( 66 ), "airborne", "blocking", SubResource( 67 ), "crouching", "blocking", SubResource( 68 ), "blocking", "crouching", SubResource( 69 ), "idle", "stunned", SubResource( 70 ), "neutral_special", "stunned", SubResource( 71 ), "crouching", "stunned", SubResource( 72 ), "forward_special", "stunned", SubResource( 73 ), "down_attack", "stunned", SubResource( 74 ), "airborne", "stunned", SubResource( 75 ), "down_special", "stunned", SubResource( 76 ), "up_special", "stunned", SubResource( 77 ), "blocking", "stunned", SubResource( 78 ), "running", "stunned", SubResource( 79 ), "neutral_attack", "stunned", SubResource( 80 ), "forward_attack", "stunned", SubResource( 81 ), "up_attack", "stunned", SubResource( 82 ), "stunned", "idle", SubResource( 83 ), "stunned", "airborne", SubResource( 84 ), "stunned", "running", SubResource( 85 ), "stunned", "crouching", SubResource( 86 ) ]
+start_node = "idle"
+graph_offset = Vector2( -263.725, -51.945 )

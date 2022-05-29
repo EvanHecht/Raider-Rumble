@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sound/Everythings_Fine_Raider_Rumble.wav" type="AudioStream" id=1]
+[ext_resource path="res://scripts/singletons/music_controller.gd" type="Script" id=2]
+[ext_resource path="res://fonts/font_resources/RobotoCondensed-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+outline_size = 8
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="MusicController" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 2 )
+
+[node name="SFXController" type="AudioStreamPlayer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+follow_viewport_enable = true
+
+[node name="VolumeLabel" type="Label" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -222.0
+margin_top = -47.5
+margin_right = 222.0
+margin_bottom = 47.5
+custom_fonts/font = SubResource( 1 )
+text = "Volume: 100%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
