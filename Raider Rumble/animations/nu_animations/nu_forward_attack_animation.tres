@@ -2,7 +2,7 @@
 
 [resource]
 resource_name = "forward_attack"
-length = 0.75
+length = 0.65
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
@@ -11,7 +11,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.48, 0.56, 0.64 ),
+"times": PoolRealArray( 0, 0.08, 0.17, 0.37, 0.45, 0.53, 0.61 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6 ]
@@ -35,13 +35,13 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.4, 0.75 ),
+"times": PoolRealArray( 0, 0.37, 0.65 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "start_move"
 }, {
-"args": [ [ 20.0, 0.0, 50.0, 100.0, 8.0, 7.0, 700.0, 20.0, 40.0, true ] ],
+"args": [ [ 20.0, 0.0, 50.0, 100.0, 8.0, 7.0, 800.0, 30.0, 40.0, true ] ],
 "method": "spawn_hitbox"
 }, {
 "args": [  ],

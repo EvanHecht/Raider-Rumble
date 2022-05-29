@@ -10,7 +10,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.7, 0.75, 0.85 ),
+"times": PoolRealArray( 0, 0.1, 0.36, 0.46, 0.56, 0.66, 0.86, 0.91, 1.01 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 5, 6, 7 ]
@@ -34,7 +34,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.95 ),
+"times": PoolRealArray( 0, 0.36, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
 "args": [  ],
@@ -54,10 +54,22 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.36, 0.37, 0.38, 0.39 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [ false ],
 "method": "set_grounded_movement_enabled"
+}, {
+"args": [ 500.0, 0.0 ],
+"method": "move_relative"
+}, {
+"args": [ 500.0, 0.0 ],
+"method": "move_relative"
+}, {
+"args": [ 500.0, 0.0 ],
+"method": "move_relative"
+}, {
+"args": [ 500.0, 0.0 ],
+"method": "move_relative"
 } ]
 }

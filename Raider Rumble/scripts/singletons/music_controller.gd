@@ -21,8 +21,12 @@ var effects = {
 	
 }
 
+func _init():
+	db = min_volume + (80.0 * volume)
+	set_volume_db(db)
+	
 func _ready():
-	change_volume(0)
+	SFXController.set_volume_db(abs(db)*.65*sign(db))
 	
 func _physics_process(delta):
 	VolumeLabel.modulate.a -= .01
@@ -31,13 +35,11 @@ func _physics_process(delta):
 func play_menu_music():
 	if stream != menu_music:
 		stream = menu_music
-		change_volume(0)
 		play()
 
 func play_battle_music():
 	if stream != battle_music:
 		stream = battle_music
-		change_volume(0)
 		play()
 
 func change_volume(amount: float):

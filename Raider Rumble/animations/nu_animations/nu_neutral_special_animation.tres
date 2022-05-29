@@ -34,13 +34,13 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1.11, 1.75 ),
+"times": PoolRealArray( 0, 1.1, 1.75 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "start_move"
 }, {
-"args": [ 2 ],
+"args": [ 4 ],
 "method": "heal"
 }, {
 "args": [  ],

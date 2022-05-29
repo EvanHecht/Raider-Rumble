@@ -40,6 +40,9 @@ func set_grounded_horizontal_speed(value: float, absolute: bool):
 		if(!absolute):
 			player.movement_vector.x *= player.direction_facing
 
+func move_relative(x: float, y: float):
+	var move_vector: Vector2 = Vector2(x * player.direction_facing, y)
+	player.move_and_slide(move_vector, Vector2.UP)
 
 # Will only affect the player while they are grounded
 # Value: The speed in pixels per frame

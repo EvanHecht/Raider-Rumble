@@ -38,7 +38,7 @@ tracks/2/keys = {
 "args": [  ],
 "method": "start_move"
 }, {
-"args": [ [ 50.0, 37.0, 40.0, 50.0, 3000.0, 7.0, 650.0, 25.0, 20.0, 6.0, 0.0, false, "res://sprites/wheelchair.png" ] ],
+"args": [ [ 50.0, 37.0, 40.0, 50.0, 3000.0, 8.0, 750.0, 25.0, 25.0, 6.0, 0.0, false, "res://sprites/wheelchair.png" ] ],
 "method": "spawn_projectile"
 }, {
 "args": [  ],

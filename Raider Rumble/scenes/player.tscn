@@ -48,7 +48,7 @@
 [ext_resource path="res://animations/ee_animations/ee_forward_special_animation.tres" type="Animation" id=46]
 [ext_resource path="res://animations/ee_animations/ee_up_special_animation.tres" type="Animation" id=47]
 [ext_resource path="res://animations/ee_animations/ee_crouching_animation.tres" type="Animation" id=48]
-[ext_resource path="res://sprites/characters/electrical engineer/sf_electrical_engineer.tres" type="SpriteFrames" id=49]
+[ext_resource path="res://sprites/characters/software engineer/sf_software_engineer.tres" type="SpriteFrames" id=49]
 [ext_resource path="res://animations/bu_animations/bu_down_attack_animation.tres" type="Animation" id=50]
 [ext_resource path="res://animations/bu_animations/bu_forward_attack_animation.tres" type="Animation" id=51]
 [ext_resource path="res://animations/bu_animations/bu_down_special_animation.tres" type="Animation" id=52]
@@ -81,7 +81,7 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 49 )
-animation = "down_special"
+animation = "forward_attack"
 
 [node name="AnimationTree" type="AnimationTree" parent="AnimatedSprite"]
 tree_root = ExtResource( 4 )

@@ -25,6 +25,7 @@ export var blink: bool = false
 var cloud_speed: float = 1
 var transitioning: bool = false
 
+
 func _ready():
 	MusicController.play_menu_music()
 
